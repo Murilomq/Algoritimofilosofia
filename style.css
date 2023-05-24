@@ -1,0 +1,149 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-image: url(img/wepik-export-20230519185634dZUn.png);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-color: #121214;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;    
+}
+
+header{
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div{
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;    
+    transition: transform .3s;
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+
+header div img{
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;    
+}
+
+section{
+    color: white;
+    background-image: linear-gradient(90deg, #4b4bf4 0%, #01012d, #0000CD 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    text-align: justify;
+    min-width: 60%;
+}
+
+section ul li{
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+section div{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2{
+    letter-spacing: -0.47px;
+    text-align: center;
+}
+
+section p{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+img {
+   width: 85%;
+   height: 80%;
+   min-width: 85%;
+   min-height: 80%;
+   display: block;
+   margin: 0 auto;
+}
+
+
+
+header div{
+    animation: fromTop .7s .2s backwards;
+}
+
+main section{
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .3s;    
+}
+
+main section:nth-child(3){
+    animation-delay: .6s;
+}
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
